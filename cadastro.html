@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cadastre-se na ConectaSocial para demonstrar interesse em voluntariado ou apoiar projetos sociais.">
+  <meta name="theme-color" content="#123f35">
+  <title>Cadastro | ConectaSocial</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="ConectaSocial — página inicial"><span class="brand-mark" aria-hidden="true">✳</span> Conecta<span>Social</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a aria-current="page" href="cadastro.html">Seja voluntário</a><a class="nav-cta" href="projetos.html#doar">Quero apoiar</a></nav>
+  </div></header>
+  <main id="conteudo">
+    <section class="page-hero page-hero-compact"><div class="container"><p class="eyebrow">Sua participação começa aqui</p><h1>Vamos fazer parte da <em>mudança?</em></h1><p class="lead">Preencha o formulário demonstrativo para indicar seu interesse em participar da rede ConectaSocial.</p></div></section>
+    <section class="section container form-layout">
+      <aside class="form-aside"><img src="assets/img/signup.svg" alt="Ilustração de pessoas colaborando e cuidando de uma planta" width="420" height="340"><h2>Todo talento pode contribuir.</h2><p>Conte um pouco sobre você e como gostaria de participar. Os dados deste protótipo não são enviados a um servidor.</p><ul class="check-list"><li>Escolha uma área de interesse</li><li>Compartilhe suas habilidades</li><li>Ajude a fortalecer sua comunidade</li></ul></aside>
+      <div class="form-panel">
+        <div class="form-title"><h2>Ficha de cadastro</h2><p>Campos com <span aria-hidden="true">*</span> são obrigatórios.</p></div>
+        <form id="registration-form" action="#" method="get">
+          <fieldset>
+            <legend>1. Dados pessoais</legend>
+            <div class="form-grid">
+              <div class="field field-full"><label for="nome">Nome completo <span aria-hidden="true">*</span></label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Ex.: Maria da Silva" minlength="3" maxlength="100" required></div>
+              <div class="field"><label for="email">E-mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" maxlength="120" required></div>
+              <div class="field"><label for="telefone">Telefone <span aria-hidden="true">*</span></label><input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 91234-5678" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Use o formato (11) 91234-5678" required></div>
+              <div class="field"><label for="cpf">CPF <span aria-hidden="true">*</span></label><input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Use o formato 000.000.000-00" required aria-describedby="cpf-help"><small id="cpf-help">Digite apenas números; a máscara será aplicada automaticamente.</small></div>
+              <div class="field"><label for="nascimento">Data de nascimento <span aria-hidden="true">*</span></label><input id="nascimento" name="nascimento" type="date" autocomplete="bday" required></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>2. Endereço</legend>
+            <div class="form-grid">
+              <div class="field field-full"><label for="endereco">Endereço (rua, avenida, número e complemento) <span aria-hidden="true">*</span></label><input id="endereco" name="endereco" type="text" autocomplete="street-address" placeholder="Rua das Flores, 123, apto. 12" maxlength="180" required></div>
+              <div class="field"><label for="cep">CEP <span aria-hidden="true">*</span></label><input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" pattern="\d{5}-\d{3}" title="Use o formato 00000-000" required></div>
+              <div class="field"><label for="cidade">Cidade <span aria-hidden="true">*</span></label><input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Sua cidade" maxlength="80" required></div>
+              <div class="field"><label for="estado">Estado <span aria-hidden="true">*</span></label><select id="estado" name="estado" autocomplete="address-level1" required><option value="">Selecione seu estado</option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option><option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>3. Como gostaria de participar?</legend>
+            <div class="form-grid">
+              <div class="field field-full"><label for="interesse">Principal interesse <span aria-hidden="true">*</span></label><select id="interesse" name="interesse" required><option value="">Selecione uma opção</option><option value="voluntariado">Ser voluntário(a)</option><option value="apoio">Apoiar campanhas e iniciativas</option><option value="parceria">Propor uma parceria</option><option value="informacoes">Receber informações sobre projetos</option></select></div>
+              <div class="field field-full"><label for="habilidades">Habilidades ou mensagem (opcional)</label><textarea id="habilidades" name="habilidades" rows="4" maxlength="600" placeholder="Conte como gostaria de contribuir..."></textarea><small>Máximo de 600 caracteres.</small></div>
+              <div class="field field-full checkbox-field"><input id="consentimento" name="consentimento" type="checkbox" required><label for="consentimento">Confirmo que li o aviso de privacidade do projeto e concordo com o uso demonstrativo dos dados inseridos. <span aria-hidden="true">*</span></label></div>
+            </div>
+          </fieldset>
+          <div class="form-actions"><button class="button button-primary" type="submit">Validar cadastro <span aria-hidden="true">→</span></button><button class="button button-quiet" type="reset">Limpar formulário</button></div>
+          <p id="form-message" class="form-message" role="status" aria-live="polite">Este formulário é uma demonstração acadêmica: os dados não são armazenados nem enviados.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">✳</span> Conecta<span>Social</span></a><p>Conectando pessoas a causas que importam.</p></div><div><h2>Explore</h2><a href="index.html">Início</a><a href="projetos.html">Projetos sociais</a><a href="projetos.html#transparencia">Transparência</a></div><div><h2>Contato</h2><p>contato@conectasocial.org.br</p><p>São Paulo — SP, Brasil</p><p>Projeto demonstrativo acadêmico</p></div></div><div class="container footer-bottom"><span>© <span data-year>2026</span> ConectaSocial. Projeto acadêmico fictício.</span><a href="#conteudo">Voltar ao topo ↑</a></div></footer>
+</body>
+</html>
