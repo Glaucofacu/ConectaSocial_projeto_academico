@@ -15,10 +15,18 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="ConectaSocial — página inicial"><span class="brand-mark" aria-hidden="true">✳</span> Conecta<span>Social</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir ou fechar o menu"><span aria-hidden="true">☰</span> Menu</button>
       <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
         <a aria-current="page" href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
+        <div class="nav-dropdown">
+          <a href="projetos.html" aria-haspopup="true">Projetos</a>
+          <ul class="nav-submenu" aria-label="Categorias de projetos">
+            <li><a href="projetos.html#educacao">Educação</a></li>
+            <li><a href="projetos.html#ambiente">Meio ambiente</a></li>
+            <li><a href="projetos.html#acolhimento">Comunidade</a></li>
+            <li><a href="projetos.html#transparencia">Transparência</a></li>
+          </ul>
+        </div>
         <a href="cadastro.html">Seja voluntário</a>
         <a class="nav-cta" href="projetos.html#doar">Quero apoiar</a>
       </nav>
