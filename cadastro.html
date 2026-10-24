@@ -13,8 +13,21 @@
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="index.html" aria-label="ConectaSocial — página inicial"><span class="brand-mark" aria-hidden="true">✳</span> Conecta<span>Social</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
-    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a aria-current="page" href="cadastro.html">Seja voluntário</a><a class="nav-cta" href="projetos.html#doar">Quero apoiar</a></nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir ou fechar o menu"><span aria-hidden="true">☰</span> Menu</button>
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <div class="nav-dropdown">
+          <a href="projetos.html" aria-haspopup="true">Projetos</a>
+          <ul class="nav-submenu" aria-label="Categorias de projetos">
+            <li><a href="projetos.html#educacao">Educação</a></li>
+            <li><a href="projetos.html#ambiente">Meio ambiente</a></li>
+            <li><a href="projetos.html#acolhimento">Comunidade</a></li>
+            <li><a href="projetos.html#transparencia">Transparência</a></li>
+          </ul>
+        </div>
+        <a aria-current="page" href="cadastro.html">Seja voluntário</a>
+        <a class="nav-cta" href="projetos.html#doar">Quero apoiar</a>
+      </nav>
   </div></header>
   <main id="conteudo">
     <section class="page-hero page-hero-compact"><div class="container"><p class="eyebrow">Sua participação começa aqui</p><h1>Vamos fazer parte da <em>mudança?</em></h1><p class="lead">Preencha o formulário demonstrativo para indicar seu interesse em participar da rede ConectaSocial.</p></div></section>
