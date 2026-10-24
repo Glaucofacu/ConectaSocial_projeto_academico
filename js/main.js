@@ -103,4 +103,46 @@ document.addEventListener("DOMContentLoaded", () => {
       message.classList.remove("is-error", "is-success");
     });
   }
+
+  // Notificação toast: feedback visível e dispensável pelo usuário.
+  const showToastButton = document.querySelector("#show-toast");
+  const toast = document.querySelector("#demo-toast");
+  const closeToastButton = document.querySelector("#close-toast");
+  if (showToastButton && toast) {
+    showToastButton.addEventListener("click", () => {
+      toast.hidden = false;
+      closeToastButton?.focus();
+    });
+  }
+  closeToastButton?.addEventListener("click", () => {
+    toast.hidden = true;
+    showToastButton?.focus();
+  });
+
+  // Modal nativo: mantém comportamento de teclado e fechamento por Escape.
+  const modal = document.querySelector("#demo-modal");
+  const openModalButton = document.querySelector("#open-demo-modal");
+  const closeModalButton = document.querySelector("#close-demo-modal");
+  if (modal && typeof modal.showModal === "function") {
+    openModalButton?.addEventListener("click", () => modal.showModal());
+    closeModalButton?.addEventListener("click", () => modal.close());
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) modal.close();
+    });
+    modal.addEventListener("close", () => openModalButton?.focus());
+  } else if (openModalButton) {
+    openModalButton.disabled = true;
+    openModalButton.title = "Este navegador não oferece suporte ao elemento dialog.";
+  }
+
+  // Fecha o menu mobile após selecionar um link e devolve o estado acessível.
+  if (menuButton && menu) {
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        menu.classList.remove("is-open");
+      });
+    });
+  }
+
 });
