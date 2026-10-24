@@ -1,0 +1,23 @@
+/* Alertas, toasts e modal demonstrativos */
+.alert { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; border: 1px solid transparent; border-radius: 14px; font-size: .92rem; }
+.alert strong { display: block; margin-bottom: 3px; }
+.alert p { margin: 0; }
+.alert-info { color: #234e68; border-color: #c8e0ee; background: #eaf4fb; }
+.alert-success { color: #155c3b; border-color: #bde5cc; background: #e5f5eb; }
+.alert-warning { color: #76500e; border-color: #f0d98e; background: #fff5d9; }
+.feedback-demo { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+.feedback-demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.toast-region { position: fixed; right: 20px; bottom: 20px; z-index: 100; width: min(360px, calc(100vw - 40px)); }
+.toast { display: flex; align-items: flex-start; gap: 12px; padding: 16px; border: 1px solid #bde5cc; border-radius: 14px; color: #155c3b; background: white; box-shadow: var(--shadow); }
+.toast[hidden] { display: none; }
+.toast p { flex: 1; margin: 0; font-size: .9rem; }
+.toast-close { padding: 0 4px; border: 0; color: inherit; background: transparent; font-size: 1.2rem; cursor: pointer; }
+.modal-demo { width: min(520px, calc(100% - 32px)); padding: 30px; border: 1px solid var(--line); border-radius: 22px; color: var(--ink); background: var(--paper); box-shadow: 0 24px 80px rgba(13,48,41,.28); }
+.modal-demo::backdrop { background: rgba(13,48,41,.58); backdrop-filter: blur(3px); }
+.modal-demo h2 { font-size: 1.8rem; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+@media (max-width: 600px) {
+  .feedback-demo-grid { grid-template-columns: 1fr; }
+  .feedback-demo { padding: 20px; }
+  .modal-demo { padding: 23px; }
+}

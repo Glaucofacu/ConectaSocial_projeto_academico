@@ -1,6 +1,20 @@
 # ConectaSocial — Projeto acadêmico
 
-Plataforma demonstrativa de uma ONG fictícia, criada com HTML5 semântico, CSS3 responsivo e JavaScript puro.
+Plataforma demonstrativa de uma ONG fictícia, desenvolvida com HTML5 semântico, CSS3 responsivo e JavaScript puro.
+
+## Entrega II — Design responsivo com CSS3
+
+A segunda etapa aprimora a identidade visual e a experiência de uso sem substituir o conteúdo da primeira etapa.
+
+### Requisitos implementados
+
+- **Design system com CSS custom properties:** paleta com mais de oito cores, escalas tipográficas, espaçamento de 8, 16, 24, 32, 48 e 64 px, bordas e sombras.
+- **Layout responsivo:** CSS Grid para estruturas e cartões; Flexbox para navegação, botões e alinhamento interno; grade utilitária de 12 colunas.
+- **Breakpoints:** 1200, 1024, 900, 700, 440 e 360 px, além de preferências para movimento reduzido.
+- **Navegação:** menu mobile com botão e estado ARIA; submenu de projetos que funciona com mouse e teclado.
+- **Componentes:** cartões, badges/tags, botões com estados de foco/hover/ativo/desabilitado, campos de formulário com feedback de validade, alertas, toast e modal acessível.
+- **Acessibilidade:** HTML semântico, link para pular conteúdo, foco visível, rótulos de formulário, textos alternativos, mensagens de estado e suporte a movimento reduzido.
+- **JavaScript:** filtros de projetos, máscaras de campos, validação nativa, toast demonstrativo e modal nativo.
 
 ## Estrutura
 
@@ -10,7 +24,12 @@ ConectaSocial/
 ├── projetos.html
 ├── cadastro.html
 ├── css/
-│   └── styles.css
+│   ├── styles.css
+│   ├── variables.css
+│   ├── components.css
+│   ├── navigation.css
+│   ├── feedback.css
+│   └── responsive.css
 ├── js/
 │   └── main.js
 └── assets/
@@ -23,57 +42,35 @@ ConectaSocial/
         └── signup.svg
 ```
 
-## Como executar
+## Como executar e testar
 
-1. Extraia a pasta.
-2. Abra `index.html` no navegador, ou use a extensão **Live Server** no Visual Studio Code.
-3. Navegue pelas páginas e teste os filtros e o formulário.
+1. Baixe ou clone este repositório.
+2. Abra `index.html` no navegador ou execute a pasta com a extensão **Live Server** do Visual Studio Code.
+3. Confira as três páginas em larguras de desktop, tablet e celular.
+4. Teste a navegação por teclado, submenu, filtros, campos inválidos/válidos, toast e modal.
+5. Confira o console do navegador e valide os HTMLs em https://validator.w3.org/.
 
-## O que está implementado
+## GitHub Pages
 
-- Três páginas HTML5 com elementos semânticos e hierarquia de títulos.
-- Layout responsivo com abordagem mobile-first e media queries.
-- Navegação móvel acessível por botão.
-- Formulário com campos HTML5, `required`, `minlength`, `maxlength`, `pattern`, `fieldset` e `legend`.
-- Máscaras JavaScript para CPF, telefone e CEP.
-- Validação nativa com `checkValidity()` e `reportValidity()`.
-- Filtros de projetos e barra de progresso demonstrativa.
-- Recursos básicos de acessibilidade: link para pular conteúdo, foco visível, rótulos de formulário, textos alternativos, mensagens de estado e preferência por movimento reduzido.
-- Metadados básicos para SEO.
-- Ilustrações locais em SVG, que são vetoriais e leves.
+Este repositório é público. Para publicar o site estático, abra **Settings → Pages**, escolha a branch `main` e a pasta `/(root)`, e salve. A publicação pode levar alguns minutos; o GitHub mostrará a URL na mesma tela.
 
-## Importante: limites do protótipo
+A branch `entrega-ii-css3` contém as alterações desta etapa para revisão antes de integrá-las à branch principal.
 
-- Os números, metas e projetos são fictícios e servem apenas para demonstração acadêmica.
-- O formulário não envia nem armazena dados. Não inclua informações pessoais reais durante os testes.
-- Não existe processamento de doações, login, banco de dados, certificados digitais ou painel administrativo conectado.
-- O formulário aplica máscara de CPF, mas não valida os dígitos verificadores do CPF.
-- A fonte tipográfica é carregada do Google Fonts quando há conexão com a internet; o restante do site usa recursos locais.
-- O HTTPS depende do serviço de hospedagem. GitHub Pages oferece hospedagem estática com HTTPS, mas não executa backend.
+## Limites do protótipo acadêmico
 
-## Validar HTML
+- Os números, metas e projetos são fictícios e ilustrativos.
+- O formulário não envia nem armazena dados. Não use dados pessoais reais durante os testes.
+- Não há processamento real de doações, autenticação, banco de dados ou painel administrativo.
+- A máscara do CPF não valida os dígitos verificadores.
+- A fonte tipográfica é carregada do Google Fonts quando há conexão; as ilustrações são locais.
+- GitHub Pages hospeda arquivos estáticos e não executa backend.
 
-Valide individualmente os arquivos `index.html`, `projetos.html` e `cadastro.html` em:
-https://validator.w3.org/
+## Organização do CSS
 
-A validação deve ser feita novamente após qualquer alteração. Confira também o console do navegador e teste o site em celular e desktop.
+- `variables.css`: tokens do design system.
+- `components.css`: componentes comuns, estados e grade de 12 colunas.
+- `navigation.css`: dropdown e ajustes da navegação.
+- `feedback.css`: alertas, toast e modal.
+- `responsive.css`: breakpoints responsivos.
+- `styles.css`: estilos base e específicos das páginas, com importação dos módulos.
 
-## Publicar no GitHub
-
-1. Crie uma conta em https://github.com/ caso ainda não tenha.
-2. Crie um repositório público chamado `conectasocial`.
-3. Envie todos os arquivos e pastas, mantendo a estrutura.
-4. Abra **Settings → Pages**.
-5. Em **Build and deployment**, selecione a publicação a partir da branch `main` e da pasta `/ (root)`.
-6. Salve e aguarde a publicação. O GitHub mostrará o endereço público do site nessa tela.
-7. Entregue o link do repositório e, se o professor aceitar, também o link do site publicado.
-
-## Próximas melhorias para uma versão de produção
-
-- Backend e banco de dados com controle de acesso.
-- Política de privacidade real e tratamento de dados conforme a LGPD.
-- Validação de CPF no servidor e proteção contra abuso.
-- Gateway de pagamento seguro para doações, sem armazenar dados de cartão.
-- Painel administrativo e relatórios com dados reais.
-- Otimização de fontes e CSS/JS para publicação.
-- Auditoria de acessibilidade com teclado, leitor de tela e ferramentas automáticas.
